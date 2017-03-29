@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Ozone OS</title>
+</head>
+<body id="particles">
+  <main role="main" class="absolutemain">
+    <header>
+      <nav class="navbar navbar-inverse" id="navbar-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Ozone Project</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a data-moveto="#about">About</a></li>
+              <li><a data-moveto="#progress">Progress</a></li>
+              <li><a href="/download">Download</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="//www.y-modify.org" target="_blank">Y-modify</a></li>
+              <li><a href="//blog.y-modify.org" target="_blank">Blog</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <div class="slider">
+      <h1 class="heading">Bring &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>to the Intel Edison</h1>
+      <img src="/images/debian.png" alt="Debian logo" class="distro-logo top" id="debian" />
+      <img src="/images/centos.png" alt="CentOS logo" class="distro-logo" id="centos" />
+      <img src="/images/fedora.png" alt="Fedora logo" class="distro-logo" id="fedora" />
+      <button type="button" class="tbtn" id="btn-dl">Download</button>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="heading heading-distro">Debian</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="heading heading-distro">CentOS</div>
+              </div>
+              <div class="swiper-slide">
+                <div class="heading heading-distro">Fedora</div>
+              </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
+      </div>
+    </div>
+    <div class="feature" id="about">
+      <h1>Bring your favorite distro to the Intel Edison.</h1>
+      <div class="art" id="ediart"></div>
+      <div class="description">
+        There has been only Yocto and closed CentOS and Debian for Intel Edison's OS until now.<br>
+        Now, we made yet another complete images of Debian CentOS, and Fedora. <br>
+        Also, Arch linux and Gentoo will be added.
+      </div>
+    </div>
+    <div class="feature">
+      <h1>Everything is opened.</h1>
+      <div class="art" id="termart">
+        <div class="topbar"><div class="barbtn closebtn"></div><div class="barbtn maxbtn"></div><div class="barbtn minbtn"></div></div>
+        <div class="chars">
+          <span class="prompt"><span class="term-green">you@machine</span>:<span class="term-blue">~/edison-src/out/linux64/</span></span>$ source poky/oe-init-build-env<br>
+          <span class="prompt"><span class="term-green">you@machine</span>:<span class="term-blue">~/edison-src/out/linux64/build</span></span>$ bitbake edison-image<br>
+          <span class="prompt"><span class="term-green">you@machine</span>:<span class="term-blue">~/edison-src/out/linux64/build</span></span>$ cd ../../..<br>
+          <span class="prompt"><span class="term-green">you@machine</span>:<span class="term-blue">~/edison-src</span></span>$&nbsp<span id="willtyping">sudo ./meta-intel-edison/utils/create-centos-image.sh<span>_</span></span>
+        </div>
+      </div>
+      <div class="description">
+        All sources, patches, and scripts to make these images are opened.<br>
+        You can build all images we're publishing by following our instructions and scripts.<br>
+        This means you can custormize all features of your Edison, with your favorite distributions.
+      </div>
+    </div>
+    <div id="progress">
+      <h1>Progress</h1>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>
+            <th><img src="/images/debian.png" alt="Debian logo" /></th>
+            <th><img src="/images/centos.png" alt="CentOS logo" /></th>
+            <th><img src="/images/fedora.png" alt="Fedora logo" /></th>
+            <th><img src="/images/archlinux.png" alt="Arch logo" class="notyet" /></th>
+            <th><img src="/images/gentoo.png" alt="Gentoo logo" class="notyet" /></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Distro</th>
+            <td>Debian</td>
+            <td>CentOS</td>
+            <td>Fedora</td>
+            <td>Arch linux</td>
+            <td>Gentoo</td>
+          </tr>
+          <tr>
+            <th>Based ver.</th>
+            <td>jessie</td>
+            <td>7</td>
+            <td>22</td>
+            <td>none</td>
+            <td>none</td>
+          </tr>
+          <tr>
+            <th>Released ver.</th>
+            <td>1.0</td>
+            <td>1.0</td>
+            <td>1.0</td>
+            <td>not yet</td>
+            <td>not yet</td>
+          </tr>
+          <tr>
+            <th>Stability</th>
+            <td><span class="stability beta">beta</span></td>
+            <td><span class="stability beta">beta</span></td>
+            <td><span class="stability beta">beta</span></td>
+            <td><span class="stability alpha">alpha</span></td>
+            <td><span class="stability">not tested</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="trynow">
+      <h1>Try it out!</h1>
+      <a href="/download" class="tbtn">Download now</a>
+    </div>
+    <footer>Copyright (c) 2017 Y-modify All Rights Reserved.</footer>
+  </main>
+  <script src="/js/bundle.js" charset="utf-8"></script>
+</body>
+</html>

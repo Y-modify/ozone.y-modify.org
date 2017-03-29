@@ -1,0 +1,32 @@
+{
+  "name": "ozone-hp",
+  "version": "1.0.0",
+  "description": "a webpage for ozone project",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch -d & browser-sync start --config bs-config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "coord.e",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.18.6",
+    "file-loader": "^0.9.0",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jquery": "^3.1.1",
+    "lazy-line-painter": "^1.7.0",
+    "node-sass": "^4.3.0",
+    "particles.js": "^2.0.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "swiper": "^3.4.1"
+  }
+}

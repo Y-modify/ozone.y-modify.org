@@ -1,0 +1,20 @@
+
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+}
+
+.absolutemain{
+  position: absolute;
+}
+
+#particles{
+  background-color: $particles-background-color-1;
+  animation: gradation 10s infinite;
+}
+
+@keyframes gradation {
+  0% { background-color: $particles-background-color-1; }
+  50% { background-color: $particles-background-color-2; }
+}

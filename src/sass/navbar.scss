@@ -1,0 +1,59 @@
+.navbar-inverse{
+  width: 100%;
+  font-family: 'Nevis';
+  font-size: $navbar-font-size;
+  .navbar-brand {
+    color: white !important;
+    font-size: $navbar-font-size + 5;
+  }
+  .navbar-collapse, .navbar-form{
+    border-color: white !important;
+    //border-bottom: 1px solid white;
+  }
+  .navbar-toggle {
+    border-color: transparent !important;
+    border-width: 2px;
+    transition: .3s;
+    &:hover,&:focus{
+      border-color: white !important;
+      background-color: transparent !important;
+    }
+  }
+  .navbar-nav > li > a{
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    color: white;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      content: '';
+      width: 0;
+      height: 4px;
+      background-color: white;
+      transition: .3s;
+    }
+    &:hover{
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+}
+
+#navbar-download{
+  background-color: #3498db;
+  border: none;
+}
+
+#navbar-top{
+  background-color: transparent;
+  border: none;
+
+  .navbar-nav > li > a{
+    &::after {
+    	bottom: 10%;
+    }
+  }
+}

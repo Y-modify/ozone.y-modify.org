@@ -1,0 +1,93 @@
+.swiper-pagination-bullet-active{
+  background: white;
+}
+
+.slider{
+  position: relative;
+  font-family: 'Nevis';
+  color: white;
+  font-size: $slider-font-size;
+  text-align: left;
+}
+
+.heading{
+  font-size: $slider-font-size;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: transparent;
+  line-height: 1.4;
+
+  position: absolute;
+  top: 20%;
+  left: 90px;
+  @media #{$tablet} {
+    left: 50px;
+    font-size: 10vw;
+  }
+  @media #{$mobile} {
+    top: 10%;
+    left: 15px;
+    font-size: 14vw;
+  }
+}
+
+.heading-distro{
+  text-decoration: underline;
+
+  top: 20%;
+  left: 300px;
+  @media #{$tablet} {
+    left: 37vw;
+    font-size: 10vw;
+  }
+  @media #{$mobile} {
+    top: 10%;
+    left: 45vw;
+    font-size: 14vw;
+  }
+}
+
+.swiper-button-prev,.swiper-button-next{
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.distro-logo{
+  position: absolute;
+  right: 20%;
+  top: 20%;
+  min-width: 120px;
+  height: 150px;
+  opacity: 0;
+  @media #{$logod} {
+    top: 60%;
+    right: 70%;
+  }
+  @media #{$tablet} {
+    display: none;
+  }
+}
+
+.top{
+  opacity: 1;
+  transition: .3s;
+}
+
+.swiper-container {
+  width: 100%;
+  height: $slider-height-max;
+  @media #{$logod} {
+    height: $slider-height-small;
+  }
+  position: relative;
+}
+
+#btn-dl{
+  position: absolute;
+  bottom: $dl-button-bottom;
+  right: $dl-button-right;
+  margin: 0 -$dl-button-padding-h;
+  z-index: 2;
+  
+}

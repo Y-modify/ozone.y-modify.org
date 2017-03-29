@@ -1,0 +1,411 @@
+
+@import "definitions.scss";
+
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "~swiper/dist/css/swiper.css";
+
+@import "../fonts/nevis.css";
+
+@import "slider.scss";
+@import "navbar.scss";
+@import "particles.scss";
+
+body{
+  margin: 0;
+  overflow: none;
+}
+
+main{
+  width: 100%;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+footer{
+  height: 50px;
+  background-color: #2c3e50;
+  color: #95a5a6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-family: 'Nevis';
+}
+
+.tbtn{
+  font-family: 'Nevis';
+  border-style: solid;
+  padding: $dl-button-padding-v $dl-button-padding-h;
+  font-size: $dl-button-font-size;
+  color: white;
+  border-color: white;
+  border-width: $dl-button-border-width;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.feature{
+  width: 100%;
+  height: 650px;
+  margin: 0;
+  background-color: white;
+  text-align: center;
+  @media #{$mobile}{
+    height: 400px;
+  }
+  &:nth-child(even){
+    background-color: #ecf0f1;
+  }
+  h1{
+    font-family: 'Nevis';
+    padding: 30px;
+    margin: 0;
+    @media #{$mobile}{
+      font-size: 1.5em;
+    }
+  }
+  .description{
+    margin: 10px 60px;
+    font-size: 3rem;
+    @media #{$logod}{
+      text-align: left;
+      font-size: 2.7vw;
+    }
+    @media #{$tablet}{
+      font-size: 3vw;
+      margin: 10px 40px;
+    }
+    @media #{$mobile}{
+      font-size: 3.5vw;
+      margin: 10px 20px;
+    }
+  }
+  .art{
+    max-height: 300px;
+    margin: 20px auto;
+  }
+
+  #termart{
+    background-color: #2c3e50;
+    border-radius: 5px;
+    text-align: left;
+    padding: 0;
+    width: 70%;
+    height: 300px;
+    font-family: Consolas, monospace;
+    font-size: 2vw;
+    color: white;
+    @media #{$mobile}{
+      width: 90%;
+      height: 20vh;
+    }
+    .topbar{
+      background-color: white;
+      border-radius: 5px 5px 0 0;
+      margin: 0;
+      height: 30px;
+      width: 100%;
+      //border-style: solid;
+      //border-color: #2c3e50;
+      //border-width: 2px;
+      text-align: right;
+      .barbtn{
+        transition: .3s;
+        margin: 6px;
+        width: 15px;
+        height: 15px;
+        border-radius: 7.5px;
+        float: right;
+      }
+      .closebtn{
+        background-color: #e74c3c;
+        margin-right: 15px;
+        &:hover{
+          background-color: #c0392b;
+        }
+      }
+      .minbtn{
+        background-color: #3498db;
+        &:hover{
+          background-color: #2980b9;
+        }
+      }
+      .maxbtn{
+        background-color: #2ecc71;
+        &:hover{
+          background-color: #27ae60;
+        }
+      }
+    }
+    .chars{
+      margin: 10px;
+    }
+  }
+  #ediart svg{
+    max-width: 70%;
+    max-height: 250px;
+  }
+  #ediart svg path{
+    fill: transparent;
+    transition-delay: 1s;
+    transition: .5s;
+  }
+}
+
+.prompt{
+  display: none;
+  .term-blue{
+    color: #3498db;
+  }
+  .term-green{
+    color: #2ecc71;
+  }
+  @media #{$logod}{
+    display: none;
+  }
+}
+
+#progress{
+  height: 500px;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  font-family: 'Nevis';
+  padding: 10px;
+  text-align: center;
+  position: relative;
+
+  @media #{$mobile}{
+    height: 300px;
+  }
+
+  table{
+    font-size: 1.5vw;
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 20px;
+    @media #{$tablet}{
+      margin-left: 10px;
+      font-size: 2vw;
+      width: 90%;
+    }
+    @media #{$mobile}{
+      margin-left: 0px;
+      font-size: 2.5vw;
+      width: 100%;
+    }
+    &,td,th{
+      border: none;
+      text-align: center;
+      @media #{$logod}{
+        font-size: 2vw;
+      }
+      @media #{$tablet}{
+        font-size: 1.5vw;
+      }
+      @media #{$mobile}{
+        font-size: 2.0vw;
+      }
+    }
+    tbody th{
+      text-align: right;
+    }
+    td,th{
+      padding: 10px;
+      @media #{$tablet}{
+        padding: 7px;
+      }
+      @media #{$mobile}{
+        padding: 4px;
+      }
+    }
+    img{
+      width: 100px;
+      @media #{$tablet}{
+        width: 65px;
+      }
+      @media #{$mobile}{
+        width: 40px;
+      }
+    }
+  }
+
+  .notyet{
+    -webkit-filter: grayscale(1); /* Webkit */
+  	filter: gray; /* IE6-9 */
+  	filter: grayscale(1); /* W3C */
+  }
+}
+
+.stability{
+  border-radius: 7px;
+  background-color: #7f8c8d;
+  color: white;
+  padding: 2px 10px;
+}
+
+.beta{
+  background-color: #27ae60;
+}
+
+.alpha{
+  background-color: #c0392b;
+}
+
+.trynow{
+  color: white;
+  text-align: center;
+  margin: 40px;
+  h1{
+    font-family: 'Nevis';
+    margin: 0;
+    padding: 0 0 50px 0;
+  }
+}
+
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { color: transparent }
+    50% { color: white }
+}
+
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { color: transparent }
+    50% { color: white }
+}
+
+#willtyping{
+  opacity: 0;
+}
+
+.typing {
+  display: inline;
+  position: relative;
+  width: 80%;
+}
+
+.typing span {
+    position:absolute;
+    text-align: left;
+    top: -40%;
+    right:0;
+    width:0;
+    background: #2c3e50; /* same as background */
+    //border-left: .1em solid black;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-animation: typing 10s steps(53, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation: typing 10s steps(53, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+                        
+    @media #{$logod}{
+      top: -30%;
+    }
+    @media #{$tablet}{
+      top: -20%;
+    }
+    @media #{$tablet}{
+      top: -10%;
+    }
+}
+
+.content{
+  margin: 10px 30px;
+  color: white;
+  font-family: 'Nevis';
+}
+
+.download-card{
+  background-color: rgba(189, 195, 199, 0.3);
+  margin: 20px;
+  padding: 20px;
+  @media #{$mobile}{
+    text-align: center;
+  }
+  //position: relative;
+  img{
+    width: 100px;
+    margin: 10px;
+    float: left;
+
+    @media #{$mobile}{
+      float: none;
+      margin: 5px;
+    }
+  }
+  h2{
+    margin: 10px;
+  }
+  table, td, th{
+    border: none;
+  }
+  table{
+    float: left;
+
+    @media #{$mobile}{
+      float: none;
+      font-size: 3vw;
+      margin-left: -5px;
+      margin-bottom: 40px;
+    }
+    margin: 15px;
+  }
+  td,th{
+    padding: 10px;
+    @media #{$tablet}{
+      padding: 6px;
+    }
+    @media #{$mobile}{
+      padding: 2px;
+    }
+  }
+  blockquote{
+
+    @media #{$mobile}{
+      text-align: left;
+    }
+  }
+  .tbtn{
+    float: right;
+    margin-right: 10%;
+    @media #{$mobile}{
+      float: none;
+      margin-right: auto;
+    }
+  }
+  @extend .clearfix;
+}
+
+.clearfix {
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
