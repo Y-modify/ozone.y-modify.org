@@ -5,6 +5,7 @@
 @import "~swiper/dist/css/swiper.css";
 
 @import "../fonts/nevis.css";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 @import "slider.scss";
 @import "navbar.scss";
@@ -100,7 +101,7 @@ footer{
     padding: 0;
     width: 70%;
     height: 300px;
-    font-family: Consolas, monospace;
+    font-family: 'Inconsolata', Consolas, "Courier", monospace;
     font-size: 2vw;
     color: white;
     @media #{$mobile}{
@@ -309,7 +310,7 @@ footer{
 .typing span {
     position:absolute;
     text-align: left;
-    top: -40%;
+    top: -20%;
     right:0;
     width:0;
     background: #2c3e50; /* same as background */
@@ -322,16 +323,6 @@ footer{
                         blink-caret 1s step-end infinite;
     -moz-animation: typing 10s steps(53, end), /* # of steps = # of characters */
                         blink-caret 1s step-end infinite;
-                        
-    @media #{$logod}{
-      top: -30%;
-    }
-    @media #{$tablet}{
-      top: -20%;
-    }
-    @media #{$tablet}{
-      top: -10%;
-    }
 }
 
 .content{
